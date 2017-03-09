@@ -125,6 +125,17 @@ class LdapConfig extends PluginConfig {
                     'desc' => $__('Enable authentication of clients')
                 )
             )),
+            'pass' => new SectionBreakField(array(
+                'label' => $__('Password change'),
+                'hint' => $__('Allow this for change of password on LDAP server. Be really carefull, it can be high security risk!'),
+            )),
+			'pwchange' => new BooleanField(array(
+                'label' => $__('Allow change of password on LDAP server'),
+                'default' => false,
+                'configuration' => array(
+                    'desc' => $__('Enabled change of password on LDAP server')
+                )
+            )),
         );
     }
 
